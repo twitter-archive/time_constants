@@ -7,7 +7,7 @@ Time constants, in seconds, so you don't have to use slow ActiveSupport helpers.
 
   require 'time_constants'
 
-You get constants from 0 to 100, except for days, which goes to 500.
+You get toplevel constants from 0 to 100, except for days, which goes to 500.
 
   T_1_SECOND
   T_2_SECONDS
@@ -33,6 +33,27 @@ You get constants from 0 to 100, except for days, which goes to 500.
   T_1_SOLAR_YEAR
   T_2_SOLAR_YEARS
 
+Note that you do not need to refer to <tt>Time::</tt>.
+
+== Benchmark
+
+  require 'time_constants'
+  require 'active_support'
+
+  def benchmark(times = 100000, samples = 20)
+    times *= samples
+    cur = Time.now
+    result = times.times { yield }
+    print "#{cur = (Time.now - cur) / samples.to_f } seconds"
+    puts " (#{(cur / $last_benchmark * 100).to_i - 100}% change)" rescue puts ""
+    $last_benchmark = cur
+    result
+  end
+
+  > benchmark { T_6_MONTHS }
+  0.03336355 seconds
+  > benchmark { 6.months.to_i }
+  1.65868245 seconds (4871% change)
 
 == License
 
