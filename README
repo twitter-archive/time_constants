@@ -1,0 +1,8 @@
+
+TimeConstants
+
+Time constants, in seconds, so you don't have to use slow ActiveSupport helpers.
+
+== License
+
+Copyright 2011 Twitter, Inc. Licensed under the Apache 2 license. See the included LICENSE file.
