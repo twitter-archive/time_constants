@@ -3,6 +3,37 @@ TimeConstants
 
 Time constants, in seconds, so you don't have to use slow ActiveSupport helpers.
 
+== Usage
+
+  require 'time_constants'
+
+You get constants from 0 to 2, except for days, which goes to 500.
+
+  T_1_SECOND
+  T_2_SECONDS
+
+  T_1_MINUTE
+  T_2_MINUTES
+
+  T_1_HOUR
+  T_2_HOURS
+
+  T_1_DAY
+  T_2_DAYS
+
+  T_1_WEEK
+  T_2_WEEKS
+
+  T_1_MONTH
+  T_2_MONTHS
+
+  T_1_YEAR
+  T_2_YEARS
+
+  T_1_SOLAR_YEAR
+  T_2_SOLAR_YEARS
+
+
 == License
 
 Copyright 2011 Twitter, Inc. Licensed under the Apache 2 license. See the included LICENSE file.
