@@ -1,10 +1,7 @@
 CHANGELOG
-ext/ccsv.c
-ext/ccsv.h
-ext/extconf.rb
 LICENSE
 Manifest
 README
-test/data.csv
-test/data_small.csv
-test/unit/test_ccsv.rb
+Rakefile
+lib/time_constants.rb
+test/unit/time_constants_test.rb
